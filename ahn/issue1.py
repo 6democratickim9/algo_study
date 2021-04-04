@@ -3,11 +3,19 @@ def solution():
     s = num_list[0]
     e = num_list[1]
     if exception_case(s, e) == "INPUT ERROR!":
+        print("INPUT ERROR!")
         return "INPUT ERROR!"
     
     result = ""
+    if s > e:
+        o = -1
+        e -= 1
+    else:
+        o = 1
+        e += 1
     for i in range(1, 10):
-        for j in (s, e):
+        
+        for j in range(s, e, o):
             if j * i >= 10:
                 result = result + f"{j} * {i} = {i*j}   "
             else:
