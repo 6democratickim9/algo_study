@@ -1,10 +1,5 @@
 def solution():
-    num_list = list(map(int, input().split(' ')))
-    s = num_list[0]
-    e = num_list[1]
-    if exception_case(s, e) == "INPUT ERROR!":
-        print("INPUT ERROR!")
-        return "INPUT ERROR!"
+    s, e = map(int, input().split(' '))
     
     result = ""
     if s > e:
@@ -26,14 +21,4 @@ def solution():
 
     print(result)
 
-    
-def exception_case(num1, num2):
-    if num1 < 2 or num1 > 9:
-        return "INPUT ERROR!"
-    if num2 < 2 or num2 > 9:
-        return "INPUT ERROR!"
-
-
-while True:
-    if solution() != "INPUT ERROR!":
-        break
+solution()
