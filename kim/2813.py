@@ -1,18 +1,23 @@
+import math
 
-def prime(m,n):
-    pr_cnt=0
-    primes =[]
-    for idx in range(m,n+1):
-        num = idx
-        for div in range(1,num+1):
-            if m%div==0:
-                pr_cnt+=1
 
-                if pr_cnt ==2:
-                    primes.append(idx)    
+def prime_verifier(n, m):
+    array = [True for i in range(m+1)]
 
-    print(primes)
+    for i in range(2, int(math.sqrt(m))+1):
+        if array[i] == True:
+            
+            j = 2
+            while i * j <= m:
+                
+                array[i*j] = False
+                j += 1
 
-    return primes
+    return[i for i in range(n, m+1)if array[i]]
 
-prime(10,100)
+
+n,m = input().split()
+n =int(n)
+m = int(m)
+print(len(prime_verifier(n,m)))
+

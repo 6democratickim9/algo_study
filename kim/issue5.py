@@ -15,22 +15,22 @@ def stars(p1, p2):
         if p2 == 1:
             for i in range(1,p1+1):
                 print("*"*i)
-            print()
-
+            
         elif p2 == 2:
             for i in range(p1, 0, -1):
                 print("*"*i)
-            print()
-        
+            
 
         elif p2 == 3:
             for i in range(1, p1+1):
-                print (" "*(p1-i),"*"*(2*i-1))
-            print()
+                print(" "*(p1-i) + "*"*(2*i-1))
+            
+# n, m = input("").split(' ')
 
-n, m = input("").split(' ')
+# n = int(n)
+# m = int(m)
 
-n = int(n)
-m = int(m)
+# stars(n, m)
 
-stars(n, m)
+print("+" + "^")
+print("+", "^")
