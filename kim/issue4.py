@@ -19,7 +19,7 @@ while True:
     
 
     try:
-        if div[q+1] !=0:
+        if div[q] !=0:
             print(div[q])
     except:
         print(div[0])
